@@ -1,8 +1,6 @@
 // I stole most of this code from here:
 // https://github.com/panicsteve/cloud-to-butt
 
-console.debug("main file loaded");
-
 walk(document.body);
 
 function walk(node) 
@@ -12,14 +10,11 @@ function walk(node)
   
   var child, next;
 
-  console.debug("walking");
-
   switch ( node.nodeType )  
   {
     case 1:  // Element
     case 9:  // Document
     case 11: // Document fragment
-      console.debug("type 1 9 or 11");
       child = node.firstChild;
       while ( child ) 
       {
@@ -30,7 +25,6 @@ function walk(node)
       break;
 
     case 3: // Text node
-      console.debug("type 3");
       handleText(node);
       break;
   }
@@ -44,11 +38,9 @@ function handleText(textNode)
 function transformText(text)
 {
   return text.replace(
-      /\d{4,}/, 
+      /\d{5,}/,
       function(match) {
         var newstr = '';
-
-        console.debug("Replacing", match);
 
         var i = match.length;
         do {
@@ -57,8 +49,6 @@ function transformText(text)
         } while (i > 3);
 
         newstr = match.substring(0, i) + newstr;
-
-        console.debug("Replacement:", newstr);
 
         return newstr;
   });

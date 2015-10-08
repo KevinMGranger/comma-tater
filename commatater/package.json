@@ -1,12 +1,15 @@
 {
   "title": "Comma Tater",
   "name": "commatater",
-  "version": "0.0.1",
-  "description": "Add punctuation to long numbers for improved readability",
-  "main": "index.js",
+  "description": "Add punctuation to long numbers for improved readability.",
   "author": "Kevin M Granger (http://kevinmgranger.me) <kmg2728@rit.edu>",
+  "license": "MIT",
+
+  "version": "0.0.2",
+
+  "main": "index.js",
+
   "engines": {
     "firefox": ">=38.0a1"
-  },
-  "license": "MIT"
+  }
 }
